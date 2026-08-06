@@ -1,0 +1,17 @@
+{#
+SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+
+SPDX-License-Identifier: MIT
+#}
+
+#!/usr/bin/env bash
+set -eo pipefail
+
+ACTUAL=$(get-llvm-version)
+EXPECTED=$(decomment < /deps/llvm/{{ ENV.B19_LLVM_SERIES | int }}/version.deps)
+
+if [ "${ACTUAL}" != "${EXPECTED}" ]
+then
+  echo "FATAL: expected ${EXPECTED}, got ${ACTUAL}" >&2
+  exit 1
+fi

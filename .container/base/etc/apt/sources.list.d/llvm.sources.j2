@@ -1,0 +1,12 @@
+{#
+SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+
+SPDX-License-Identifier: MIT
+#}
+
+Types: deb
+Components: main
+Suites: llvm-toolchain-{{ ENV.DISTRIB_CODENAME }}-{{ ENV.B19_LLVM_SERIES }}
+URIs: https://apt.llvm.org/{{ ENV.DISTRIB_CODENAME }}/
+Architectures: {{ ENV.TARGETARCH }}
+Signed-By: /etc/apt/trusted.gpg.d/llvm-snapshot.asc

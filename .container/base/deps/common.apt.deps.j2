@@ -1,0 +1,22 @@
+{#
+SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+
+SPDX-License-Identifier: MIT
+#}
+
+binutils                       # GNU assembler, linker and binary utilities | deps: libbinutils, libc6, libgcc-s1, libgprofng0, libstdc++6, binutils-common, binutils-x86-64-linux-gnu
+ccache                         # Compiler cache for fast recompilation of C/C++ code | deps: libc6, libfmt10, libgcc-s1, libhiredis1.1.0, libstdc++6, libxxhash0, libzstd1
+clang-{{ ENV.B19_LLVM_SERIES }}           # C, C++ and Objective-C compiler | deps: libc6, libclang-cpp{{ ENV.B19_LLVM_SERIES }}, libgcc-s1, libllvm-{{ ENV.B19_LLVM_SERIES }}, libstdc++6, libstdc++-13-dev, libgcc-13-dev, libobjc-13-dev, libclang-common-{{ ENV.B19_LLVM_SERIES }}-dev, llvm-{{ ENV.B19_LLVM_SERIES }}-linker-tools, libclang1-{{ ENV.B19_LLVM_SERIES }}, libc6-dev, binutils
+clang-format-{{ ENV.B19_LLVM_SERIES }}    # Tool to format C/C++/Obj-C code | deps: libc6, libclang-cpp{{ ENV.B19_LLVM_SERIES }}, libgcc-s1, libllvm{{ ENV.B19_LLVM_SERIES }}, libstdc++6, python3
+clang-tidy-{{ ENV.B19_LLVM_SERIES }}      # clang-based C++ linter tool | deps: libc6, libclang-cpp{{ ENV.B19_LLVM_SERIES }}, libgcc-s1, libllvm{{ ENV.B19_LLVM_SERIES }}, libstdc++6, python3, libclang-common-{{ ENV.B19_LLVM_SERIES }}-dev, clang-tools-{{ ENV.B19_LLVM_SERIES }}, python3-yaml
+clang-tools-{{ ENV.B19_LLVM_SERIES }}     # clang-based tools for C/C++ developments | deps: libc6, libclang-cpp{{ ENV.B19_LLVM_SERIES }}, libclang1-{{ ENV.B19_LLVM_SERIES }}, libgcc-s1, libllvm{{ ENV.B19_LLVM_SERIES }}, libstdc++6, libxml2-16, libzstd1, zlib1g, clang-{{ ENV.B19_LLVM_SERIES }}, python3
+cmake                          # cross-platform, open-source make system | deps: cmake-data, procps, libarchive13t64, libc6, libcurl4t64, libexpat1, libgcc-s1, libjsoncpp26, librhash1, libstdc++6, libuv1t64, zlib1g
+file                           # Recognize the type of data in a file using "magic" numbers | deps: libc6, libmagic1t64
+libc++-{{ ENV.B19_LLVM_SERIES }}-dev      # LLVM C++ Standard library (development files) | deps: libc++1-{{ ENV.B19_LLVM_SERIES }}, libc++abi-{{ ENV.B19_LLVM_SERIES }}-dev, libunwind-{{ ENV.B19_LLVM_SERIES }}-dev
+libc++abi-{{ ENV.B19_LLVM_SERIES }}-dev   # LLVM low level support for a standard C++ library (development files) | deps: libc++abi1-{{ ENV.B19_LLVM_SERIES }}
+lld-{{ ENV.B19_LLVM_SERIES }}             # LLVM-based linker | deps: libc6, libgcc-s1, libllvm{{ ENV.B19_LLVM_SERIES }}, libstdc++6, libzstd1, zlib1g
+lldb-{{ ENV.B19_LLVM_SERIES }}            # Next generation, high-performance debugger | deps: libc6, libclang-cpp{{ ENV.B19_LLVM_SERIES }}, libedit2, libgcc-s1, liblldb-{{ ENV.B19_LLVM_SERIES }}, libllvm{{ ENV.B19_LLVM_SERIES }}, liblzma5, libncurses6, libstdc++6, libtinfo6, libxml2-16, zlib1g, python3-lldb-{{ ENV.B19_LLVM_SERIES }}
+llvm-{{ ENV.B19_LLVM_SERIES }}            # Modular compiler and toolchain technologies | deps: llvm-{{ ENV.B19_LLVM_SERIES }}-runtime, llvm-{{ ENV.B19_LLVM_SERIES }}-linker-tools, libc6, libcurl4t64, libgcc-s1, libllvm{{ ENV.B19_LLVM_SERIES }}, libpfm4, libstdc++6, libzstd1, zlib1g
+make
+ninja-build                    # small build system closest in spirit to Make | deps: libc6, libgcc-s1, libstdc++6
+pkg-config                     # manage compile and link flags for libraries (transitional package) | deps: pkgconf
