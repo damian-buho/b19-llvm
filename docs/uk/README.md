@@ -4,13 +4,13 @@ SPDX-License-Identifier: MIT
 pf-cli-managed: yes
 -->
 
-<!-- textlint-disable terminology -->
+<!-- textlint-disable terminology,common-misspellings -->
 
 [English](../../README.md) · [Español](../es/README.md)
 
 # B19/LLVM
 
-LLVM/Clang toolchain from apt.llvm.org with sccache
+Дистрибуція LLVM/Clang з підтримкою спільноти на основі B19/Ubuntu
 
 [![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![License](https://img.shields.io/static/v1?label=license&message=MIT&color=4c1&style=flat-square)](LICENSE) ![Commit style](https://img.shields.io/static/v1?label=commits&message=conventional&color=blue&style=flat-square) ![Workflow](https://img.shields.io/static/v1?label=workflow&message=git-flow&color=blue&style=flat-square) ![Versioning](https://img.shields.io/static/v1?label=versioning&message=semantic&color=blue&style=flat-square) [![PRs welcome](https://img.shields.io/static/v1?label=PRs&message=welcome&color=4c1&style=flat-square)](CONTRIBUTING.md) [![Citation](https://img.shields.io/static/v1?label=citation&message=cff&color=blue&style=flat-square)](CITATION.cff) [![REUSE compliance](https://api.reuse.software/badge/codeberg.org/b19/llvm)](https://api.reuse.software/info/codeberg.org/b19/llvm)
 
@@ -20,9 +20,9 @@ LLVM/Clang toolchain from apt.llvm.org with sccache
 
 ## Можливості
 
-- Architecture-specific optimization flags with compile-time probing
-- Transparent compiler caching (sccache / ccache)
-- LLVM/Clang toolchain from apt.llvm.org with series selection
+- Прапорці оптимізації для конкретних архітектур із зондуванням під час збирання
+- Прозоре кешування компілятора (sccache / ccache)
+- Інструментальний ланцюжок LLVM/Clang з apt.llvm.org із вибором серії
 - Persistent APT cache across builds
 - Service process management with log routing (b19-exec)
 - Cached artifact downloads with integrity verification (b19-fetch)
@@ -51,7 +51,7 @@ LLVM/Clang toolchain from apt.llvm.org with sccache
 - Pre-installed utility tools
 - XDG Base Directory paths
 
-Див. [FEATURES.md](../../FEATURES.md), щоб переглянути повний перелік.
+Див. [FEATURES.md](FEATURES.md), щоб переглянути повний перелік.
 
 ## Що надає цей проєкт
 
@@ -130,12 +130,18 @@ FROM docker.io/damianbuho/b19-llvm-21:latest
 
 ## Посилання
 
+### Проєкт
+
 - [Специфікація Projectfile](https://projectfile.org)
-- [B19/LLVM on Codeberg](https://codeberg.org/b19/llvm)
-- [B19/LLVM on GitHub](https://github.com/damian-buho/b19-llvm)
-- [B19/LLVM on kiota.ch](https://kiota.ch/b19/llvm)
-- [Issues on Codeberg](https://codeberg.org/b19/llvm/issues)
-- [Issues on GitHub](https://github.com/damian-buho/b19-llvm/issues)
+- [B19/LLVM на Codeberg](https://codeberg.org/b19/llvm)
+- [B19/LLVM на GitHub](https://github.com/damian-buho/b19-llvm)
+- [B19/LLVM на kiota.ch](https://kiota.ch/b19/llvm)
+- [Issues на Codeberg](https://codeberg.org/b19/llvm/issues)
+- [Issues на GitHub](https://github.com/damian-buho/b19-llvm/issues)
+
+### Інше
+
+- [Від автора](https://dbuho.me)
 
 ## Ліцензія
 
