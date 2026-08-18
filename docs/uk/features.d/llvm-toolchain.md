@@ -4,6 +4,8 @@ SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
 SPDX-License-Identifier: MIT
 -->
 
+<!-- textlint-disable terminology,common-misspellings -->
+
 # Інструментальний ланцюжок LLVM/Clang з apt.llvm.org із вибором серії
 
 - Clang, LLD, LLDB, clang-format, clang-tidy і clang-tools встановлюються з upstream-репозиторію `apt.llvm.org` (а не з Ubuntu main), із вибором серії (22, 21) через `B19_LLVM_SERIES`.
@@ -11,3 +13,5 @@ SPDX-License-Identifier: MIT
 - Містить заголовки розробки libc++ і libc++abi, що дозволяє C++-проєктам лінкуватися зі стандартною бібліотекою LLVM.
 - Усі версіоновані бінарні файли реєструються як типові системні через `update-alternatives`.
 - Постачається повний інструментальний ланцюжок збирання: cmake, ninja-build, binutils, make, pkg-config і ccache.
+
+<!-- textlint-enable -->
