@@ -30,7 +30,7 @@ jobs:
         B19_LLVM_SERIES: ["22", "21"]
     env:
       B19_LLVM_SERIES: ${{ matrix.B19_LLVM_SERIES }}
-      M6E_IMAGE_PUBLISHED: ${{ vars.OUTPUT_REGISTRY }}/b19/llvm-${{ matrix.B19_LLVM_SERIES }}:latest
+      M6E_IMAGE_PUBLISHED: kiota.ch/b19/llvm-${{ matrix.B19_LLVM_SERIES }}:latest
     steps:
       - uses: actions/checkout@v7
         with:
@@ -38,22 +38,22 @@ jobs:
       - name: grype-scan-registry
         uses: projectfile/ci-actions/run-tool@v1
         with:
-          image: ${{ vars.D9T_DOCKER_REGISTRY }}/d9t/go-tools
+          image: ${{ vars.D9T_GO_TOOLS_IMAGE || format('{0}/d9t/go-tools', vars.SOURCE_DOCKER_REGISTRY || 'kiota.ch') }}
           version: ${{ env.M6E_TAG }}
           run: auto-grype image
           env: |-
             B19_LLVM_SERIES=${{ matrix.B19_LLVM_SERIES }}
-            M6E_IMAGE_PUBLISHED=${{ vars.OUTPUT_REGISTRY }}/b19/llvm-${{ matrix.B19_LLVM_SERIES }}:latest
+            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm-${{ matrix.B19_LLVM_SERIES }}:latest
           mounts: /app/data/ci-cache/grype-db:/app/.cache/grype:ro
       - name: trivy-scan-registry
         uses: projectfile/ci-actions/run-tool@v1
         with:
-          image: ${{ vars.D9T_DOCKER_REGISTRY }}/d9t/go-tools
+          image: ${{ vars.D9T_GO_TOOLS_IMAGE || format('{0}/d9t/go-tools', vars.SOURCE_DOCKER_REGISTRY || 'kiota.ch') }}
           version: ${{ env.M6E_TAG }}
           run: auto-trivy image
           env: |-
             B19_LLVM_SERIES=${{ matrix.B19_LLVM_SERIES }}
-            M6E_IMAGE_PUBLISHED=${{ vars.OUTPUT_REGISTRY }}/b19/llvm-${{ matrix.B19_LLVM_SERIES }}:latest
+            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm-${{ matrix.B19_LLVM_SERIES }}:latest
             TRIVY_CACHE_BACKEND
           mounts: /app/data/ci-cache/trivy-db:/app/.cache/trivy:ro
       - uses: actions/upload-artifact@v3
@@ -64,7 +64,12 @@ jobs:
           if-no-files-found: warn
   source-is-audited:
     runs-on: docker
+    needs: ["source-is-secure"]
     if: (github.event_name == 'workflow_dispatch') || (github.event_name == 'schedule')
+    steps:
+      - run: echo source-is-audited
+  source-is-secure:
+    runs-on: docker
     steps:
       - uses: actions/checkout@v7
         with:
@@ -72,14 +77,14 @@ jobs:
       - name: grype-scan-source
         uses: projectfile/ci-actions/run-tool@v1
         with:
-          image: ${{ vars.D9T_DOCKER_REGISTRY }}/d9t/go-tools
+          image: ${{ vars.D9T_GO_TOOLS_IMAGE || format('{0}/d9t/go-tools', vars.SOURCE_DOCKER_REGISTRY || 'kiota.ch') }}
           version: ${{ env.M6E_TAG }}
           run: auto-grype
           mounts: /app/data/ci-cache/grype-db:/app/.cache/grype:ro
       - name: trivy-scan-source
         uses: projectfile/ci-actions/run-tool@v1
         with:
-          image: ${{ vars.D9T_DOCKER_REGISTRY }}/d9t/go-tools
+          image: ${{ vars.D9T_GO_TOOLS_IMAGE || format('{0}/d9t/go-tools', vars.SOURCE_DOCKER_REGISTRY || 'kiota.ch') }}
           version: ${{ env.M6E_TAG }}
           run: auto-trivy fs
           env: |-
@@ -88,6 +93,6 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
-          name: reports-source-is-audited-${{ github.run_id }}
+          name: reports-source-is-secure-${{ github.run_id }}
           path: reports/
           if-no-files-found: warn
