@@ -5,4 +5,4 @@
 # SPDX-License-Identifier: MIT
 
   set -e
-  clang --version | grep -oP -m1 '\d+\.\d+\.\d+'
+  clang --version | grep -oP -m1 '\d+(?:\.\d+)+'
