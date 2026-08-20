@@ -22,7 +22,7 @@ Community-maintained distribution of LLVM/Clang based on B19/Ubuntu
 - Transparent compiler caching (sccache / ccache)
 - LLVM/Clang toolchain from apt.llvm.org with series selection
 
-### Inherited from B19/Ubuntu 1.4.1
+### Inherited from B19/Ubuntu
 
 - Persistent APT cache across builds
 - Service process management with log routing (b19-exec)
