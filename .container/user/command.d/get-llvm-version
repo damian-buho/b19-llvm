@@ -5,4 +5,5 @@
 # SPDX-License-Identifier: MIT
 
   set -e
-  clang --version | grep -oP -m1 '\d+(?:\.\d+)+'
+  # Anchored: an unanchored pattern also matches the snapshot build timestamp in the parenthetical suffix
+  clang --version | grep -oP -m1 '(?<=clang version )\d+(?:\.\d+)+'

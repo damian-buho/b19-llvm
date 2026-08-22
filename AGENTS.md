@@ -23,6 +23,7 @@ LLVM/Clang toolchain base image used as builder for zig and other LLVM-based pro
 - Versioned alternatives registered
 - `sccache` intercepts `clang`/`clang++`
 - Probe-selected CFLAGS/LDFLAGS (same mechanism as gcc)
+- `get-llvm-version` anchors its regular expression to `clang version` via lookbehind: apt.llvm.org snapshot builds embed a dotted build timestamp in the version banner’s parenthetical, which an unanchored `\d+(?:\.\d+)+` also matches on the same line, leaking a second line into the command’s output
 
 ## Inheritable hooks
 
