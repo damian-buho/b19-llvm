@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: llvm 1.0.0-4-g896044f\n"
+"Project-Id-Version: llvm 1.1.9\n"
 "Report-Msgid-Bugs-To: https://codeberg.org/b19/llvm/issues\n"
-"POT-Creation-Date: 2026-08-07 22:08+0000\n"
+"POT-Creation-Date: 2026-09-07 03:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,6 +115,18 @@ msgstr ""
 
 #: .container/base/build.d/compile-llvm/post/900-show-cache-stats.i.sh:11
 msgid "Unknown compile cache mode: %s"
+msgstr ""
+
+#: .container/user/test.d/1100-compile-cache-assembly.sh:16
+msgid "sccache wrapper missing assembly bypass (clang-%s)"
+msgstr ""
+
+#: .container/user/test.d/1100-compile-cache-assembly.sh:22
+msgid "ccache wrapper missing assembly bypass (clang-%s)"
+msgstr ""
+
+#: .container/user/test.d/1100-compile-cache-assembly.sh:26
+msgid "compile-cache assembly bypass verified (clang-%s)"
 msgstr ""
 
 #: .container/user/test.d/1300-compile-test.sh:21
