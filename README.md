@@ -54,61 +54,14 @@ Community-maintained distribution of LLVM/Clang based on B19/Ubuntu
 
 See [FEATURES.md](FEATURES.md) for the full list.
 
-## What this provides
-
-- **Container image** `ghcr.io/damian-buho/b19/llvm-22:latest`
-- **Container image** `ghcr.io/damian-buho/b19/llvm-21:latest`
-- **Container image** `docker.io/damianbuho/b19-llvm-22:latest`
-- **Container image** `docker.io/damianbuho/b19-llvm-21:latest`
-
 ## Installation
 
-Pull the published container image:
-
-### Pull from GHCR
-
-```sh
-docker pull ghcr.io/damian-buho/b19/llvm-22:latest
-docker pull ghcr.io/damian-buho/b19/llvm-21:latest
-```
-
-### Pull from DockerHub
-
-```sh
-docker pull docker.io/damianbuho/b19-llvm-22:latest
-docker pull docker.io/damianbuho/b19-llvm-21:latest
-```
-
-Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision you want to pin.
-
 If the registries above are unreachable, pull from the origin instead:
-
-### Pull from Kiota
 
 ```sh
 docker pull kiota.ch/b19/llvm-22:latest
 docker pull kiota.ch/b19/llvm-21:latest
 ```
-
-## Usage
-
-Build on top of this image:
-
-### From GHCR
-
-```dockerfile
-FROM ghcr.io/damian-buho/b19/llvm-22:latest
-FROM ghcr.io/damian-buho/b19/llvm-21:latest
-```
-
-### From DockerHub
-
-```dockerfile
-FROM docker.io/damianbuho/b19-llvm-22:latest
-FROM docker.io/damianbuho/b19-llvm-21:latest
-```
-
-For the recommended multi-stage pattern and the build-hook system (build.d), scaffold a derivative with `b19/scripts/scaffold.sh` from [m6e/b19](https://kiota.ch/m6e/b19).
 
 ## Building
 
