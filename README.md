@@ -6,7 +6,7 @@ pf-cli-managed: yes
 
 [Español](docs/es/README.md) · [Українська](docs/uk/README.md)
 
-# B19/LLVM
+# B19 / LLVM
 
 Community-maintained distribution of LLVM/Clang based on B19/Ubuntu
 
