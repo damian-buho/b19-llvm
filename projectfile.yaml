@@ -31,6 +31,14 @@ keywords:
   - cpp
   - docker
 kind: SoftwareSourceCode
+links:
+  - label:
+      en: B19 / LLVM on kiota.ch
+      es: B19 / LLVM en kiota.ch
+      uk: B19 / LLVM на kiota.ch
+    preferred: true
+    type: source-code
+    url: https://kiota.ch/b19/llvm
 org:
   b19:
     scaffold:
@@ -57,19 +65,11 @@ org:
         parents:
           - url: ssh://git@kiota.ch/b19/ubuntu.git
     status: maintained
-technologies:
-  - c
-  - cpp
-links:
-  - label:
-      en: B19 / LLVM on kiota.ch
-      es: B19 / LLVM en kiota.ch
-      uk: B19 / LLVM на kiota.ch
-    preferred: true
-    type: source-code
-    url: https://kiota.ch/b19/llvm
 repositories:
   - branch: main
     role: origin
     type: git
     url: ssh://git@kiota.ch/b19/llvm.git
+technologies:
+  - c
+  - cpp
