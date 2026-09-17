@@ -35,7 +35,7 @@ SPDX-License-Identifier: MIT
 - Todos los binarios versionados se registran como predeterminados del sistema mediante `update-alternatives`.
 - Cadena de herramientas de compilación completa incluida: cmake, ninja-build, binutils, make, pkg-config y ccache.
 
-## Heredado de B19/Ubuntu
+## Heredado de B19 / Ubuntu
 
 ### Caché APT persistente entre compilaciones
 

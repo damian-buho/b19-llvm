@@ -35,7 +35,7 @@ SPDX-License-Identifier: MIT
 - Усі версіоновані бінарні файли реєструються як типові системні через `update-alternatives`.
 - Постачається повний інструментальний ланцюжок збирання: cmake, ninja-build, binutils, make, pkg-config і ccache.
 
-## Успадковано від B19/Ubuntu
+## Успадковано від B19 / Ubuntu
 
 ### Постійний APT-кеш між збираннями
 
