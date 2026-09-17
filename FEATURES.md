@@ -33,7 +33,7 @@ SPDX-License-Identifier: MIT
 - All versioned binaries are registered as system defaults via `update-alternatives`.
 - Full build toolchain included: cmake, ninja-build, binutils, make, pkg-config, and ccache.
 
-## Inherited from B19/Ubuntu
+## Inherited from B19 / Ubuntu
 
 ### Persistent APT cache across builds
 
