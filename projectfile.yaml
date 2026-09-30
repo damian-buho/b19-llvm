@@ -21,6 +21,7 @@ includes:
   - .makefile/b19/images/ubuntu.yaml
   - .makefile/b19/traits/release.yaml
   - .makefile/b19/vulnerabilities/linux-libc-dev.yaml
+  - .makefile/container/traits/image-variant.yaml
   - https://kiota.ch/b19/metadata/raw/branch/main/include.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/forge/github.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/include.yaml
@@ -68,25 +69,13 @@ links:
       es: Paquetes en GHCR
       uk: Пакунки на GHCR
     type: package-registry
-    url: https://github.com/damian-buho/b19-llvm/pkgs/container/b19%2Fllvm-22
-  - label:
-      en: Packages on GHCR
-      es: Paquetes en GHCR
-      uk: Пакунки на GHCR
-    type: package-registry
-    url: https://github.com/damian-buho/b19-llvm/pkgs/container/b19%2Fllvm-21
+    url: https://github.com/damian-buho/b19-llvm/pkgs/container/b19%2Fllvm
   - label:
       en: Packages on Docker Hub
       es: Paquetes en Docker Hub
       uk: Пакунки на Docker Hub
     type: package-registry
-    url: https://hub.docker.com/r/damianbuho/b19-llvm-22
-  - label:
-      en: Packages on Docker Hub
-      es: Paquetes en Docker Hub
-      uk: Пакунки на Docker Hub
-    type: package-registry
-    url: https://hub.docker.com/r/damianbuho/b19-llvm-21
+    url: https://hub.docker.com/r/damianbuho/b19-llvm
 org:
   b19:
     scaffold:
@@ -97,10 +86,15 @@ org:
       shell:
         include:
           - '**/compile-cache/*/*'
+    build:
+      args:
+        B19_LLVM_SERIES: "22"
     image:
       series: "{B19_LLVM_SERIES}"
-      path: ${org}/${name}-${series}
-      flatpath: ${org}-${name}-${series}
+      tag: ${series}
+      variant:
+        parts:
+          - series
     ci:
       image: b19/llvm-{B19_LLVM_SERIES}
       matrix:
