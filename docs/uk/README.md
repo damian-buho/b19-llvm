@@ -30,10 +30,10 @@ pf-cli-managed: yes
 
 ## Що надає цей проєкт
 
-- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm-22:latest`
-- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm-21:latest`
-- **Образ контейнера** `damianbuho/b19-llvm-22:latest`
-- **Образ контейнера** `damianbuho/b19-llvm-21:latest`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm:22`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm:21`
+- **Образ контейнера** `damianbuho/b19-llvm:22`
+- **Образ контейнера** `damianbuho/b19-llvm:21`
 
 ## Встановлення
 
@@ -42,13 +42,13 @@ pf-cli-managed: yes
 ### Завантажити з GHCR — linux/amd64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/llvm-22:latest
+docker pull ghcr.io/damian-buho/b19/llvm:22
 ```
 
 ### Завантажити з DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-llvm-22:latest
+docker pull damianbuho/b19-llvm:22
 ```
 
 Серія: `22` | `21`
@@ -60,7 +60,7 @@ docker pull damianbuho/b19-llvm-22:latest
 ### Завантажити з Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/llvm-22:latest
+docker pull kiota.ch/b19/llvm:22
 ```
 
 Серія: `22` | `21`
@@ -72,13 +72,13 @@ docker pull kiota.ch/b19/llvm-22:latest
 ### З GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/llvm-22:latest
+FROM ghcr.io/damian-buho/b19/llvm:22
 ```
 
 ### З DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-llvm-22:latest
+FROM damianbuho/b19-llvm:22
 ```
 
 Серія: `22` | `21`
