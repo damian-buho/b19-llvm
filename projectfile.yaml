@@ -96,7 +96,6 @@ org:
         parts:
           - series
     ci:
-      image: b19/llvm-{B19_LLVM_SERIES}
       matrix:
         axes:
           B19_LLVM_SERIES:
