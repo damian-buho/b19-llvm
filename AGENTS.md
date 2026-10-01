@@ -12,10 +12,10 @@ LLVM/Clang toolchain base image used as builder for zig and other LLVM-based pro
 
 ## Key facts
 
-- Base: `b19/ubuntu/${B19_UBUNTU_SERIES}` (resolute by default)
+- Base: `b19/ubuntu:${B19_UBUNTU_SERIES}` (resolute by default)
 - LLVM installed from `apt.llvm.org` (not Ubuntu main repos)
 - Series: 22, 21, 20 — series 20 pins Ubuntu noble via `matrix.overrides`; 21/22 use the resolute default
-- Image name: `b19/llvm-{series}`
+- Image name: `b19/llvm:{series}`
 
 ## What it provides
 
