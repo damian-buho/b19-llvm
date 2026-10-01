@@ -33,4 +33,5 @@ keywords:
   - c
   - cpp
   - docker
-version: 0.5.0
+version: 0.6.0
+date-released: "2026-10-01"
