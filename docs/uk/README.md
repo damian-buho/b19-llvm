@@ -51,7 +51,7 @@ docker pull ghcr.io/damian-buho/b19/llvm:llvm22
 docker pull damianbuho/b19-llvm:llvm22
 ```
 
-B19_LLVM_SERIES: `22` | `21`
+Серія: `llvm22` | `llvm21`
 
 Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
 
@@ -63,7 +63,7 @@ B19_LLVM_SERIES: `22` | `21`
 docker pull kiota.ch/b19/llvm:llvm22
 ```
 
-B19_LLVM_SERIES: `22` | `21`
+Серія: `llvm22` | `llvm21`
 
 ## Використання
 
@@ -81,7 +81,7 @@ FROM ghcr.io/damian-buho/b19/llvm:llvm22
 FROM damianbuho/b19-llvm:llvm22
 ```
 
-B19_LLVM_SERIES: `22` | `21`
+Серія: `llvm22` | `llvm21`
 
 Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
 

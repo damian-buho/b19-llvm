@@ -51,7 +51,7 @@ docker pull ghcr.io/damian-buho/b19/llvm:llvm22
 docker pull damianbuho/b19-llvm:llvm22
 ```
 
-B19_LLVM_SERIES: `22` | `21`
+Serie: `llvm22` | `llvm21`
 
 Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: descarga el nivel de precisión que quieras fijar.
 
@@ -63,7 +63,7 @@ Si los registros anteriores no están disponibles, descarga desde el origen:
 docker pull kiota.ch/b19/llvm:llvm22
 ```
 
-B19_LLVM_SERIES: `22` | `21`
+Serie: `llvm22` | `llvm21`
 
 ## Uso
 
@@ -81,7 +81,7 @@ FROM ghcr.io/damian-buho/b19/llvm:llvm22
 FROM damianbuho/b19-llvm:llvm22
 ```
 
-B19_LLVM_SERIES: `22` | `21`
+Serie: `llvm22` | `llvm21`
 
 Para el patrón multietapa recomendado y el sistema de hooks de compilación (build.d), genera un derivado con `b19/scripts/scaffold.sh` de [m6e/b19](https://kiota.ch/m6e/b19).
 
