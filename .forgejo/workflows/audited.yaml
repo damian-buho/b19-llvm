@@ -34,7 +34,7 @@ jobs:
         B19_LLVM_SERIES: ["22", "21"]
     env:
       B19_LLVM_SERIES: ${{ matrix.B19_LLVM_SERIES }}
-      M6E_IMAGE_PUBLISHED: kiota.ch/b19/llvm:${{ matrix.B19_LLVM_SERIES }}
+      M6E_IMAGE_PUBLISHED: kiota.ch/b19/llvm:llvm${{ matrix.B19_LLVM_SERIES }}
       CI_IGNORE_VULNERABILITIES: ${{ vars.CI_IGNORE_VULNERABILITIES }}
     steps:
       - uses: actions/checkout@v7
@@ -50,7 +50,7 @@ jobs:
           run: auto-grype image
           env: |-
             B19_LLVM_SERIES=${{ matrix.B19_LLVM_SERIES }}
-            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm:${{ matrix.B19_LLVM_SERIES }}
+            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm:llvm${{ matrix.B19_LLVM_SERIES }}
             CI_IGNORE_VULNERABILITIES=${{ vars.CI_IGNORE_VULNERABILITIES }}
             M6E_SHARED_CACHE=Y
           mounts: /app/data/ci-cache/grype-db:/app/.cache/grype:rw
@@ -63,7 +63,7 @@ jobs:
           run: auto-trivy image
           env: |-
             B19_LLVM_SERIES=${{ matrix.B19_LLVM_SERIES }}
-            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm:${{ matrix.B19_LLVM_SERIES }}
+            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm:llvm${{ matrix.B19_LLVM_SERIES }}
             CI_IGNORE_VULNERABILITIES=${{ vars.CI_IGNORE_VULNERABILITIES }}
             M6E_SHARED_CACHE=Y
             TRIVY_CACHE_BACKEND

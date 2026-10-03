@@ -91,7 +91,7 @@ org:
       args:
         B19_LLVM_SERIES: "22"
     image:
-      series: "{B19_LLVM_SERIES}"
+      series: "llvm{B19_LLVM_SERIES}"
       tag: ${series}
       variant:
         parts:

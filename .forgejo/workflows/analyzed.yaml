@@ -32,7 +32,7 @@ jobs:
         B19_LLVM_SERIES: ["22", "21"]
     env:
       B19_LLVM_SERIES: ${{ matrix.B19_LLVM_SERIES }}
-      M6E_IMAGE_PUBLISHED: kiota.ch/b19/llvm:${{ matrix.B19_LLVM_SERIES }}
+      M6E_IMAGE_PUBLISHED: kiota.ch/b19/llvm:llvm${{ matrix.B19_LLVM_SERIES }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -51,4 +51,4 @@ jobs:
           run: auto-dive
           env: |-
             B19_LLVM_SERIES=${{ matrix.B19_LLVM_SERIES }}
-            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm:${{ matrix.B19_LLVM_SERIES }}
+            M6E_IMAGE_PUBLISHED=kiota.ch/b19/llvm:llvm${{ matrix.B19_LLVM_SERIES }}
