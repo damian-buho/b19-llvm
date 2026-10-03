@@ -18,7 +18,7 @@ pf-cli-managed: yes
 
 [![Publish pipeline on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/published.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Vulnerability audit on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/audited.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Dependency freshness on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Analysis sweep on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
 
 ## Можливості
 
@@ -30,10 +30,10 @@ pf-cli-managed: yes
 
 ## Що надає цей проєкт
 
-- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm:22`
-- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm:21`
-- **Образ контейнера** `damianbuho/b19-llvm:22`
-- **Образ контейнера** `damianbuho/b19-llvm:21`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm:llvm22`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/llvm:llvm21`
+- **Образ контейнера** `damianbuho/b19-llvm:llvm22`
+- **Образ контейнера** `damianbuho/b19-llvm:llvm21`
 
 ## Встановлення
 
@@ -42,16 +42,16 @@ pf-cli-managed: yes
 ### Завантажити з GHCR — linux/amd64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/llvm:22
+docker pull ghcr.io/damian-buho/b19/llvm:llvm22
 ```
 
 ### Завантажити з DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-llvm:22
+docker pull damianbuho/b19-llvm:llvm22
 ```
 
-Серія: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
 
@@ -60,10 +60,10 @@ docker pull damianbuho/b19-llvm:22
 ### Завантажити з Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/llvm:22
+docker pull kiota.ch/b19/llvm:llvm22
 ```
 
-Серія: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 ## Використання
 
@@ -72,16 +72,16 @@ docker pull kiota.ch/b19/llvm:22
 ### З GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/llvm:22
+FROM ghcr.io/damian-buho/b19/llvm:llvm22
 ```
 
 ### З DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-llvm:22
+FROM damianbuho/b19-llvm:llvm22
 ```
 
-Серія: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
 

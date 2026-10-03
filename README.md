@@ -16,7 +16,7 @@ Community-maintained distribution of LLVM/Clang built on B19/Ubuntu. This reposi
 
 [![Publish pipeline on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/published.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Vulnerability audit on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/audited.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Dependency freshness on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Analysis sweep on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
 
 ## Features
 
@@ -28,10 +28,10 @@ It also inherits the features of B19 / Ubuntu — see [Features](docs/FEATURES.m
 
 ## What this provides
 
-- **Container image** `ghcr.io/damian-buho/b19/llvm:22`
-- **Container image** `ghcr.io/damian-buho/b19/llvm:21`
-- **Container image** `damianbuho/b19-llvm:22`
-- **Container image** `damianbuho/b19-llvm:21`
+- **Container image** `ghcr.io/damian-buho/b19/llvm:llvm22`
+- **Container image** `ghcr.io/damian-buho/b19/llvm:llvm21`
+- **Container image** `damianbuho/b19-llvm:llvm22`
+- **Container image** `damianbuho/b19-llvm:llvm21`
 
 ## Installation
 
@@ -40,16 +40,16 @@ Pull the published container image:
 ### Pull from GHCR — linux/amd64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/llvm:22
+docker pull ghcr.io/damian-buho/b19/llvm:llvm22
 ```
 
 ### Pull from DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-llvm:22
+docker pull damianbuho/b19-llvm:llvm22
 ```
 
-Series: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision you want to pin.
 
@@ -58,10 +58,10 @@ If the registries above are unreachable, pull from the origin instead:
 ### Pull from Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/llvm:22
+docker pull kiota.ch/b19/llvm:llvm22
 ```
 
-Series: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 ## Usage
 
@@ -70,16 +70,16 @@ Build on top of this image:
 ### From GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/llvm:22
+FROM ghcr.io/damian-buho/b19/llvm:llvm22
 ```
 
 ### From DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-llvm:22
+FROM damianbuho/b19-llvm:llvm22
 ```
 
-Series: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 For the recommended multi-stage pattern and the build-hook system (build.d), scaffold a derivative with `b19/scripts/scaffold.sh` from [m6e/b19](https://kiota.ch/m6e/b19).
 

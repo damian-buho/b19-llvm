@@ -18,7 +18,7 @@ Distribución de LLVM/Clang mantenida por la comunidad, construida sobre B19/Ubu
 
 [![Publish pipeline on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/published.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Vulnerability audit on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/audited.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Dependency freshness on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions) [![Analysis sweep on GitHub](https://github.com/damian-buho/b19-llvm/actions/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-llvm/actions)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
 
 ## Características
 
@@ -30,10 +30,10 @@ También hereda las características de B19 / Ubuntu; consulta [Características
 
 ## Qué entrega este proyecto
 
-- **Imagen de contenedor** `ghcr.io/damian-buho/b19/llvm:22`
-- **Imagen de contenedor** `ghcr.io/damian-buho/b19/llvm:21`
-- **Imagen de contenedor** `damianbuho/b19-llvm:22`
-- **Imagen de contenedor** `damianbuho/b19-llvm:21`
+- **Imagen de contenedor** `ghcr.io/damian-buho/b19/llvm:llvm22`
+- **Imagen de contenedor** `ghcr.io/damian-buho/b19/llvm:llvm21`
+- **Imagen de contenedor** `damianbuho/b19-llvm:llvm22`
+- **Imagen de contenedor** `damianbuho/b19-llvm:llvm21`
 
 ## Instalación
 
@@ -42,16 +42,16 @@ Descarga la imagen de contenedor publicada:
 ### Descargar de GHCR — linux/amd64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/llvm:22
+docker pull ghcr.io/damian-buho/b19/llvm:llvm22
 ```
 
 ### Descargar de DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-llvm:22
+docker pull damianbuho/b19-llvm:llvm22
 ```
 
-Serie: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: descarga el nivel de precisión que quieras fijar.
 
@@ -60,10 +60,10 @@ Si los registros anteriores no están disponibles, descarga desde el origen:
 ### Descargar de Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/llvm:22
+docker pull kiota.ch/b19/llvm:llvm22
 ```
 
-Serie: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 ## Uso
 
@@ -72,16 +72,16 @@ Construye sobre esta imagen:
 ### Desde GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/llvm:22
+FROM ghcr.io/damian-buho/b19/llvm:llvm22
 ```
 
 ### Desde DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-llvm:22
+FROM damianbuho/b19-llvm:llvm22
 ```
 
-Serie: `22` | `21`
+B19_LLVM_SERIES: `22` | `21`
 
 Para el patrón multietapa recomendado y el sistema de hooks de compilación (build.d), genera un derivado con `b19/scripts/scaffold.sh` de [m6e/b19](https://kiota.ch/m6e/b19).
 
