@@ -17,6 +17,7 @@ identity:
     uk: Дистрибуція LLVM/Clang з підтримкою спільноти, зібрана на основі B19/Ubuntu. Цей репозиторій містить лише пакування — Dockerfile, скрипти збирання та конфігурацію, усе під ліцензією MIT; вихідний код LLVM/Clang отримують під час збирання, і він зберігає власну ліцензію.
   version: 0.7.8
   released: "2026-10-15"
+  visibility: public
 includes:
   - .makefile/b19/ci.yaml
   - .makefile/b19/images/ubuntu.yaml
@@ -38,9 +39,9 @@ keywords:
 kind: SoftwareSourceCode
 links:
   - label:
-      en: B19 / LLVM on GitHub
-      es: B19 / LLVM en GitHub
-      uk: B19 / LLVM на GitHub
+      en: Repository on GitHub
+      es: Repositorio en GitHub
+      uk: Репозиторій на GitHub
     priority: 80
     tags:
       - public
@@ -58,9 +59,9 @@ links:
     type: bugs
     url: https://github.com/damian-buho/b19-llvm/issues
   - label:
-      en: B19 / LLVM on kiota.ch
-      es: B19 / LLVM en kiota.ch
-      uk: B19 / LLVM на kiota.ch
+      en: Repository on kiota.ch
+      es: Repositorio en kiota.ch
+      uk: Репозиторій на kiota.ch
     preferred: true
     priority: 10
     type: source-code
