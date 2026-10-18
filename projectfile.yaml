@@ -15,8 +15,8 @@ identity:
     en: Community-maintained distribution of LLVM/Clang built on B19/Ubuntu. This repository holds only the packaging — Dockerfile, build scripts, and configuration, all MIT-licensed; the upstream LLVM/Clang is fetched at build time and retains its own licensing.
     es: Distribución de LLVM/Clang mantenida por la comunidad, construida sobre B19/Ubuntu. Este repositorio contiene únicamente el empaquetado — Dockerfile, scripts de compilación y configuración, todo con licencia MIT; el código original de LLVM/Clang se obtiene en tiempo de compilación y conserva su propia licencia.
     uk: Дистрибуція LLVM/Clang з підтримкою спільноти, зібрана на основі B19/Ubuntu. Цей репозиторій містить лише пакування — Dockerfile, скрипти збирання та конфігурацію, усе під ліцензією MIT; вихідний код LLVM/Clang отримують під час збирання, і він зберігає власну ліцензію.
-  version: 0.7.9
-  released: "2026-10-17"
+  version: 0.7.10
+  released: "2026-10-18"
   visibility: public
 includes:
   - .makefile/b19/ci.yaml
