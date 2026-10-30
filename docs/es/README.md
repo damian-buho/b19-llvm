@@ -20,6 +20,14 @@ Distribución de LLVM/Clang mantenida por la comunidad, construida sobre B19/Ubu
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
 
+## Proyecto original
+
+Este proyecto empaqueta [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
+Gracias a: The LLVM Project
+
+Este proyecto empaqueta [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
+Gracias a: Mozilla, Ted Mielczarek, Sylvestre Ledru y los colaboradores de sccache
+
 ## Características
 
 - Flags de optimización específicos de cada arquitectura con sondeo en tiempo de compilación
@@ -123,14 +131,6 @@ Puntos de entrada de la canalización:
 ## Enlaces
 
 - [Especificación de Projectfile](https://projectfile.org)
-
-## Proyecto original
-
-Este proyecto empaqueta [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
-Gracias a: The LLVM Project
-
-Este proyecto empaqueta [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
-Gracias a: Mozilla
 
 ## Licencia
 

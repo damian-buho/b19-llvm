@@ -18,6 +18,14 @@ Community-maintained distribution of LLVM/Clang built on B19/Ubuntu. This reposi
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
 
+## Upstream
+
+This project packages [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
+Thanks to: The LLVM Project
+
+This project packages [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
+Thanks to: Mozilla, Ted Mielczarek, Sylvestre Ledru and the sccache contributors
+
 ## Features
 
 - Architecture-specific optimization flags with compile-time probing
@@ -121,14 +129,6 @@ Pipeline entry points:
 ## Links
 
 - [Projectfile Specification](https://projectfile.org)
-
-## Upstream
-
-This project packages [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
-Thanks to: The LLVM Project
-
-This project packages [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
-Thanks to: Mozilla
 
 ## License
 

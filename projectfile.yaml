@@ -124,7 +124,10 @@ upstream:
     license: Apache-2.0 WITH LLVM-exception
     name: LLVM
     url: https://llvm.org
-  - authors: Mozilla
+  - authors:
+      en: Mozilla, Ted Mielczarek, Sylvestre Ledru and the sccache contributors
+      es: Mozilla, Ted Mielczarek, Sylvestre Ledru y los colaboradores de sccache
+      uk: Mozilla, Ted Mielczarek, Sylvestre Ledru та учасники sccache
     license: Apache-2.0
     name: sccache
     url: https://github.com/mozilla/sccache

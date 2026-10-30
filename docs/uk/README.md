@@ -20,6 +20,14 @@ pf-cli-managed: yes
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/llvm/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/llvm/actions)
 
+## Першоджерело
+
+Цей проєкт пакує [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
+Дякуємо: The LLVM Project
+
+Цей проєкт пакує [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
+Дякуємо: Mozilla, Ted Mielczarek, Sylvestre Ledru та учасники sccache
+
 ## Можливості
 
 - Прапорці оптимізації для конкретних архітектур із зондуванням під час збирання
@@ -123,14 +131,6 @@ make container-build
 ## Посилання
 
 - [Специфікація Projectfile](https://projectfile.org)
-
-## Першоджерело
-
-Цей проєкт пакує [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
-Дякуємо: The LLVM Project
-
-Цей проєкт пакує [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
-Дякуємо: Mozilla
 
 ## Ліцензія
 
