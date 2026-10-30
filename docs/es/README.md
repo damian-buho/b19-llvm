@@ -124,8 +124,16 @@ Puntos de entrada de la canalización:
 
 - [Especificación de Projectfile](https://projectfile.org)
 
+## Proyecto original
+
+Este proyecto empaqueta [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
+Gracias a: The LLVM Project
+
+Este proyecto empaqueta [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
+Gracias a: Mozilla
+
 ## Licencia
 
-Este proyecto se publica bajo la licencia MIT — consulta el archivo [LICENSE](LICENSE) para más detalles.
+El empaquetado de este repositorio se publica bajo la licencia MIT — consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 <!-- textlint-enable -->

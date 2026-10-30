@@ -122,6 +122,14 @@ Pipeline entry points:
 
 - [Projectfile Specification](https://projectfile.org)
 
+## Upstream
+
+This project packages [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
+Thanks to: The LLVM Project
+
+This project packages [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
+Thanks to: Mozilla
+
 ## License
 
-This project is licensed under MIT — see the [LICENSE](LICENSE) file for details.
+The packaging in this repository is licensed under MIT — see the [LICENSE](LICENSE) file for details.

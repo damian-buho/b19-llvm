@@ -124,8 +124,16 @@ make container-build
 
 - [Специфікація Projectfile](https://projectfile.org)
 
+## Першоджерело
+
+Цей проєкт пакує [LLVM](https://llvm.org) (`Apache-2.0 WITH LLVM-exception`).
+Дякуємо: The LLVM Project
+
+Цей проєкт пакує [sccache](https://github.com/mozilla/sccache) (`Apache-2.0`).
+Дякуємо: Mozilla
+
 ## Ліцензія
 
-Цей проєкт ліцензовано на умовах MIT — див. файл [LICENSE](LICENSE) для подробиць.
+Пакування в цьому репозиторії ліцензовано на умовах MIT — див. файл [LICENSE](LICENSE) для подробиць.
 
 <!-- textlint-enable -->

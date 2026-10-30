@@ -119,3 +119,12 @@ repositories:
 technologies:
   - c
   - cpp
+upstream:
+  - authors: The LLVM Project
+    license: Apache-2.0 WITH LLVM-exception
+    name: LLVM
+    url: https://llvm.org
+  - authors: Mozilla
+    license: Apache-2.0
+    name: sccache
+    url: https://github.com/mozilla/sccache
